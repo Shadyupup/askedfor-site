@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="AskedFor watches local Facebook groups and Reddit for couples asking for a wedding vendor and emails you the lead within the hour. Free two-week trial for Sacramento and Bay Area vendors.">
+<title>AskedFor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --ground: #F4F7F5;
+    --surface: #FFFFFF;
+    --surface-2: #E9EFEC;
+    --ink: #16211E;
+    --ink-2: #3E4C47;
+    --muted: #6B7A75;
+    --line: #D6DFDB;
+    --accent: #1B7F5A;
+    --accent-ink: #0F5A3F;
+    --accent-soft: #DDF1E7;
+    --warn-soft: #FBEFD9;
+    --warn-ink: #7A4B00;
+    --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+    --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+    --mono: "IBM Plex Mono", "SF Mono", Menlo, monospace;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #0F1614; --surface: #16201D; --surface-2: #1E2A26; --ink: #E8EFEC; --ink-2: #C3CEC9;
+      --muted: #8FA09A; --line: #2B3935; --accent: #4CC38A; --accent-ink: #9BE3C1; --accent-soft: #163A2B;
+      --warn-soft: #3A2B10; --warn-ink: #F2C97D; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #0F1614; --surface: #16201D; --surface-2: #1E2A26; --ink: #E8EFEC; --ink-2: #C3CEC9;
+    --muted: #8FA09A; --line: #2B3935; --accent: #4CC38A; --accent-ink: #9BE3C1; --accent-soft: #163A2B;
+    --warn-soft: #3A2B10; --warn-ink: #F2C97D; color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; padding-inline: 20px; padding-block: 0 64px; }
+  a { color: var(--accent-ink); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .wrap { max-width: 1040px; margin: 0 auto; }
+  header.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 22px; }
+  .brand { font-family: var(--display); font-weight: 800; font-size: 22px; letter-spacing: -0.01em; text-decoration: none; color: var(--ink); display: flex; align-items: center; gap: 10px; }
+  .brand .dot { width: 12px; height: 12px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+  .top nav a { text-decoration: none; color: var(--ink-2); font-weight: 600; font-size: 15px; margin-left: 22px; }
+  .top nav a.cta { color: var(--accent-ink); }
+
+  .hero { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; padding-block: 40px 56px; }
+  .eyebrow { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 14px; }
+  h1 { font-family: var(--display); font-weight: 800; font-size: clamp(38px, 5.2vw, 60px); line-height: 1.02; letter-spacing: -0.02em; margin: 0 0 18px; text-wrap: balance; }
+  h1 em { font-style: normal; color: var(--accent-ink); }
+  .lede { font-size: 20px; color: var(--ink-2); max-width: 32ch; margin: 0 0 26px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .btn { display: inline-block; font-family: var(--display); font-weight: 600; font-size: 16px; text-decoration: none; padding: 12px 20px; border-radius: 8px; border: 1px solid transparent; }
+  .btn.primary { background: var(--accent); color: #FFFFFF; }
+  .btn.ghost { border-color: var(--line); color: var(--ink); background: var(--surface); }
+  .fine { font-size: 14px; color: var(--muted); margin: 14px 0 0; }
+
+  /* the product's real unit: one alert */
+  .alert { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 14px 40px rgba(22, 33, 30, 0.08); overflow: hidden; }
+  .alert .bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 18px; border-bottom: 1px solid var(--line); font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+  .alert .bar b { color: var(--accent-ink); font-weight: 500; }
+  .alert .body { padding: 18px; display: grid; gap: 14px; }
+  .alert .subject { font-family: var(--display); font-weight: 600; font-size: 18px; line-height: 1.25; margin: 0; letter-spacing: -0.01em; }
+  .alert .meta { font-size: 14px; color: var(--muted); margin: 0; }
+  .quote { border-left: 3px solid var(--accent); padding: 4px 0 4px 14px; margin: 0; color: var(--ink-2); font-style: italic; }
+  .reply { background: var(--surface-2); border-radius: 8px; padding: 12px 14px; font-size: 15px; }
+  .reply .label { display: block; font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+  .tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .tag { font-family: var(--mono); font-size: 12px; padding: 3px 9px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-ink); }
+  .tag.warn { background: var(--warn-soft); color: var(--warn-ink); }
+
+  section { padding-block: 40px; border-top: 1px solid var(--line); }
+  h2 { font-family: var(--display); font-weight: 700; font-size: 30px; letter-spacing: -0.015em; line-height: 1.15; margin: 0 0 8px; text-wrap: balance; }
+  .sub { color: var(--ink-2); margin: 0 0 28px; max-width: 60ch; }
+
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; counter-reset: step; }
+  .step { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 20px 20px 22px; display: grid; gap: 8px; align-content: start; }
+  .step::before { counter-increment: step; content: counter(step); font-family: var(--mono); font-size: 13px; color: var(--accent-ink); }
+  .step h3 { font-family: var(--display); font-weight: 600; font-size: 19px; margin: 0; }
+  .step p { margin: 0; color: var(--ink-2); font-size: 16px; }
+
+  .who { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+  .cats { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .cats li { padding: 8px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); font-size: 15px; }
+  .cats li.soon { color: var(--muted); border-style: dashed; }
+  .where { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .where li { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 16px; }
+  .where li span:last-child { font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+
+  .promises { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 32px; margin: 0; padding: 0; list-style: none; }
+  .promises li { padding-left: 26px; position: relative; color: var(--ink-2); font-size: 16px; }
+  .promises li::before { content: ""; position: absolute; left: 0; top: 9px; width: 14px; height: 14px; border-radius: 50%; background: var(--accent-soft); box-shadow: inset 0 0 0 4px var(--accent); }
+  .promises li b { color: var(--ink); }
+
+  .trial { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 32px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center; }
+  .trial h2 { margin-bottom: 10px; }
+  .trial p { margin: 0 0 18px; color: var(--ink-2); }
+  .trial .box { background: var(--surface-2); border-radius: 10px; padding: 18px; font-size: 15px; }
+  .trial .box dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; }
+  .trial .box dt { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+  .trial .box dd { margin: 0; }
+
+  footer { padding-block: 28px 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 14px; color: var(--muted); }
+  footer a { color: var(--muted); }
+
+  @media (max-width: 820px) {
+    .hero, .who, .trial { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr; }
+    .promises { grid-template-columns: 1fr; }
+    .hero { padding-block: 24px 40px; gap: 28px; }
+    .top nav a { margin-left: 14px; }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .brand .dot { animation: pulse 2.6s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 4px var(--accent-soft); } 50% { box-shadow: 0 0 0 8px var(--accent-soft); } }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#"><span class="dot" aria-hidden="true"></span>AskedFor</a>
+    <nav aria-label="Page">
+      <a href="#how">How it works</a>
+      <a href="#who">Who it's for</a>
+      <a href="#promises">What it never does</a>
+      <a class="cta" href="#trial">Free trial</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div>
+      <p class="eyebrow">For local wedding and event vendors</p>
+      <h1>Someone nearby just <em>asked for</em> what you do.</h1>
+      <p class="lede">AskedFor watches local Facebook groups and Reddit for couples asking for a photographer, a makeup artist, a DJ, a rental. When one matches you, you get an email within the hour, with a reply you can paste as yourself.</p>
+      <div class="actions">
+        <a class="btn primary" href="#trial">Start a free two-week trial</a>
+        <a class="btn ghost" href="#how">See how it works</a>
+      </div>
+      <p class="fine">No setup on your end. Nothing is ever posted or sent on your behalf.</p>
+    </div>
+
+    <div class="alert" aria-label="Example lead email">
+      <div class="bar"><span>lead · <b>hair &amp; makeup</b></span><span>posted 42 min ago</span></div>
+      <div class="body">
+        <p class="subject">Bride in Woodland needs hair and makeup for 6, wedding Sunday 10/4</p>
+        <p class="meta">Facebook group “Bride To Bride Sacramento Wedding”</p>
+        <blockquote class="quote">“Hi! I am looking for some last-minute vendors for a wedding Sunday 10/4 in Woodland: hair stylist for 6 people, makeup artist for 6 people. If you are available &amp; interested, please DM me…”</blockquote>
+        <div class="reply">
+          <span class="label">Ready-to-send reply</span>
+          Woodland in early October is such a pretty time for a wedding. One thing worth locking in early with a team of six: ask them to build the schedule backwards from your ceremony time, since six faces plus six heads usually needs an early start or a second artist. I'm a local hair and makeup artist and happy to check my calendar for 10/4 if you want to message me.
+        </div>
+        <div class="tags"><span class="tag">local · Woodland</span><span class="tag warn">event in 13 days</span><span class="tag">party of 6</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="how">
+    <h2>How it works</h2>
+    <p class="sub">Couples ask for vendors in local groups every day. Whoever answers first, with something useful, usually gets the booking. AskedFor makes sure that's you.</p>
+    <div class="steps">
+      <div class="step">
+        <h3>We watch the groups</h3>
+        <p>Local bride groups, community and recommendation groups, and the city subreddit are checked around the clock. Dozens of groups in each area, and the list keeps growing.</p>
+      </div>
+      <div class="step">
+        <h3>We screen out the noise</h3>
+        <p>Every post is read and judged: is this a couple actually asking for your category, in your area, with a real date? Vendors advertising, used items for sale and out-of-town posts never reach you.</p>
+      </div>
+      <div class="step">
+        <h3>You reply as yourself</h3>
+        <p>You get one email per lead: the post, the link, the date, and a reply written to be pasted as your own. You decide whether to answer, and you send it from your own account.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="who">
+    <h2>Who it's for</h2>
+    <p class="sub">Small local vendors who are good at the work and don't have hours a day to scroll groups looking for the next client.</p>
+    <div class="who">
+      <div>
+        <p class="eyebrow">Categories</p>
+        <ul class="cats">
+          <li>Photographers</li><li>Videographers</li><li>Hair &amp; makeup</li><li>DJs &amp; musicians</li>
+          <li>Planners &amp; coordinators</li><li>Florists</li><li>Rentals &amp; photo booths</li><li>Cakes &amp; catering</li>
+          <li>Officiants</li><li>Venues</li><li class="soon">More local services soon</li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow">Areas</p>
+        <ul class="where">
+          <li><span>Sacramento and surrounding counties</span><span>live</span></li>
+          <li><span>San Francisco Bay Area</span><span>live</span></li>
+          <li><span>Your city</span><span>ask us</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="promises">
+    <h2>What it never does</h2>
+    <p class="sub">Group admins and couples can smell automation. AskedFor is built so that everything the couple sees comes from a real person: you.</p>
+    <ul class="promises">
+      <li><b>Never posts or comments for you.</b> Every reply is sent by you, from your own account, only if you choose to.</li>
+      <li><b>Never messages couples on your behalf.</b> We hand you the lead. The conversation is yours.</li>
+      <li><b>Never sends the same lead to a crowd.</b> Each lead goes to one matching vendor. Paying members get their category exclusively in their area.</li>
+      <li><b>Never sells your data.</b> Your email is used for lead alerts and nothing else. Reply “no” at any time and you're removed.</li>
+    </ul>
+  </section>
+
+  <section id="trial">
+    <div class="trial">
+      <div>
+        <h2>Two weeks, free, no setup</h2>
+        <p>Tell us your category and your area. Starting the next day, every matching lead lands in your inbox as it appears. At the end of two weeks you'll know exactly how many real requests came through, and you decide whether to continue.</p>
+        <a class="btn primary" href="mailto:raysharemygoodproduct@gmail.com?subject=AskedFor%20free%20trial&amp;body=Category%3A%20%0AArea%3A%20%0ABusiness%20name%3A%20">Email us to start</a>
+        <p class="fine">Or reply to the lead email you received. That's all it takes.</p>
+      </div>
+      <div class="box">
+        <dl>
+          <dt>You send</dt><dd>Your category, your area, your business name</dd>
+          <dt>You get</dt><dd>Every matching lead by email, usually within the hour of the post</dd>
+          <dt>You do</dt><dd>Reply to the ones you want, as yourself</dd>
+          <dt>You owe</dt><dd>Nothing for the first two weeks. Pricing is discussed only if you want to keep going.</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>AskedFor · Sacramento, California</span>
+    <span>Questions or want to stop receiving leads: <a href="mailto:raysharemygoodproduct@gmail.com">raysharemygoodproduct@gmail.com</a></span>
+  </footer>
+</div>
+</body>
+</html>
