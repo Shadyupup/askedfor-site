@@ -46,7 +46,8 @@
   header.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 22px; }
   .brand { font-family: var(--display); font-weight: 800; font-size: 22px; letter-spacing: -0.01em; text-decoration: none; color: var(--ink); display: flex; align-items: center; gap: 10px; }
   .brand .dot { width: 12px; height: 12px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
-  .top nav a { text-decoration: none; color: var(--ink-2); font-weight: 600; font-size: 15px; margin-left: 22px; }
+  .top nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px 22px; }
+  .top nav a { text-decoration: none; color: var(--ink-2); font-weight: 600; font-size: 15px; white-space: nowrap; }
   .top nav a.cta { color: var(--accent-ink); }
 
   .hero { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; padding-block: 40px 56px; }
@@ -113,7 +114,7 @@
     .steps { grid-template-columns: 1fr; }
     .promises { grid-template-columns: 1fr; }
     .hero { padding-block: 24px 40px; gap: 28px; }
-    .top nav a { margin-left: 14px; }
+    .top nav { gap: 6px 14px; }
   }
   @media (prefers-reduced-motion: no-preference) {
     .brand .dot { animation: pulse 2.6s ease-in-out infinite; }
@@ -138,7 +139,7 @@
     <div>
       <p class="eyebrow">For local wedding and event vendors</p>
       <h1>Someone nearby just <em>asked for</em> what you do.</h1>
-      <p class="lede">AskedFor watches local Facebook groups and Reddit for couples asking for a photographer, a makeup artist, a DJ, a rental. When one matches you, you get an email within the hour, with a reply you can paste as yourself.</p>
+      <p class="lede">AskedFor watches local Facebook groups and Reddit for couples asking for a photographer, a makeup artist, a DJ, a rental. When one matches you, you get an email within the hour: the post, the date, the link, and one practical note. You reply in your own words.</p>
       <div class="actions">
         <a class="btn primary" href="#trial">Start a free two-week trial</a>
         <a class="btn ghost" href="#how">See how it works</a>
@@ -153,8 +154,8 @@
         <p class="meta">Facebook group “Bride To Bride Sacramento Wedding”</p>
         <blockquote class="quote">“Hi! I am looking for some last-minute vendors for a wedding Sunday 10/4 in Woodland: hair stylist for 6 people, makeup artist for 6 people. If you are available &amp; interested, please DM me…”</blockquote>
         <div class="reply">
-          <span class="label">Ready-to-send reply</span>
-          Woodland in early October is such a pretty time for a wedding. One thing worth locking in early with a team of six: ask them to build the schedule backwards from your ceremony time, since six faces plus six heads usually needs an early start or a second artist. I'm a local hair and makeup artist and happy to check my calendar for 10/4 if you want to message me.
+          <span class="label">P.S. if useful</span>
+          Six for hair and six for makeup on one morning usually runs long with a solo artist, so it may be worth asking the couple about their ceremony time and whether they need a second artist on site.
         </div>
         <div class="tags"><span class="tag">local · Woodland</span><span class="tag warn">event in 13 days</span><span class="tag">party of 6</span></div>
       </div>
@@ -175,7 +176,7 @@
       </div>
       <div class="step">
         <h3>You reply as yourself</h3>
-        <p>You get one email per lead: the post, the link, the date, and a reply written to be pasted as your own. You decide whether to answer, and you send it from your own account.</p>
+        <p>You get one email per lead: the post, the link, the date, and one practical note about the request. You decide whether to answer, and you write it in your own words, from your own account.</p>
       </div>
     </div>
   </section>
@@ -225,8 +226,8 @@
       <div class="box">
         <dl>
           <dt>You send</dt><dd>Your category, your area, your business name</dd>
-          <dt>You get</dt><dd>Every matching lead by email, usually within the hour of the post</dd>
-          <dt>You do</dt><dd>Reply to the ones you want, as yourself</dd>
+          <dt>You get</dt><dd>Every matching lead by email, usually within the hour of the post, with the date and a practical note</dd>
+          <dt>You do</dt><dd>Reply to the ones you want, in your own words</dd>
           <dt>You owe</dt><dd>Nothing for the first two weeks. Pricing is discussed only if you want to keep going.</dd>
         </dl>
       </div>
