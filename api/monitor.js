@@ -31,11 +31,12 @@ table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;p
 </style></head><body>
 <h1>AskedFor 监控</h1><div class="muted">更新于 ${esc(upd)}(太平洋时间)· 每 5 分钟自动刷新</div>
 <div class="card"><b class="t">🚨 告警</b>${alerts}</div>
-<div class="card"><b class="t">📡 渠道(过去 24 小时)</b><div class="wrap"><table><thead><tr><th>渠道</th><th>帖子</th><th>线索</th><th>最近抓到</th><th>发现延迟</th><th>推送延迟</th><th>节奏</th></tr></thead><tbody>${rows}</tbody></table></div>
+<div class="card"><b class="t">📡 渠道(过去 24 小时)</b><div class="wrap"><table><thead><tr><th>渠道</th><th>帖子</th><th>线索</th><th>最近抓到</th><th>发现延迟</th><th>推送延迟</th><th>配额与限流</th></tr></thead><tbody>${rows}</tbody></table></div>
 <div class="muted">发现延迟 = 帖子发出到我们抓到(中位数);推送延迟 = 抓到到发给 Elaine。超过 6 小时标红。</div></div>
+<div class="card"><b class="t">⚠️ 今天的警告,按类型</b>${(P.warning_types||[]).length ? (P.warning_types||[]).map((t) => `<div class="row"><b>${esc(t.count)}</b> × ${esc(t.type)}</div>`).join("") : '<div class="muted">今天没有警告</div>'}</div>
 <div class="card"><b class="t">⚙️ 流水线</b><div>待分类积压 <b>${fmt(P.backlog)}</b> · 今天警告 <b>${fmt(P.warnings_today)}</b> · 0 帖的群 <b>${fmt(P.zero_groups_today)}</b> 次</div><div class="muted">上一轮结束 ${fmt(P.last_cycle)} · 调度器 ${h.scheduler && h.scheduler.scheduler_on ? "开" : "关"} · 下一轮 ${fmt(h.scheduler && h.scheduler.next_run_at)}</div></div>
 <div class="card"><b class="t">📬 投递(今天)</b><div>Elaine 线索:今天 <b>${fmt(D.elaine_leads_today)}</b> · 7 天 <b>${fmt(D.elaine_leads_7d)}</b></div>
-<div>商家邮件:${Object.keys(A).map((k) => `${esc(k)} <b>${A[k].sent_today}</b>/${A[k].cap}`).join(" · ") || '<span class="muted">无</span>'}</div>
+<div>商家邮件:${Object.keys(A).map((k) => `${esc({gmail:"旧 Gmail", nw:"新域名邮箱"}[k]||k)} <b>${A[k].sent_today}</b>/${A[k].cap}`).join(" · ") || '<span class="muted">无</span>'}</div>
 <div>回信:${Object.keys(R).length ? Object.keys(R).map((k) => `${esc(k)} ${R[k]}`).join(" · ") : '<span class="muted">无</span>'} · 退信/拒收 <b>${fmt(D.bounces_today)}</b> · 发送失败 <b>${fmt(D.failed_sends_today)}</b></div>
 <div class="muted">商家 ${fmt(V.total)} 家:已同意 ${fmt(V.active)} · 回过信 ${fmt(V.engaged)} · 拒绝 ${fmt(V.declined)} · 暂停 ${fmt(V.paused)}</div></div>
 </body></html>`;
