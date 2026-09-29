@@ -1,91 +1,124 @@
 {
- "at": "2026-09-27T06:32:51.917058+00:00",
+ "at": "2026-09-28T21:23:43.617077+00:00",
  "sources": {
   "facebook": {
-   "posts": 836,
-   "leads": 7,
-   "last_seen": "2026-09-27T05:32:22+00:00",
-   "discovery_h": null,
-   "notify_min": null,
-   "with_posted_at": 0,
-   "last_seen_h": 1.0
+   "posts": 1545,
+   "leads": 26,
+   "last_seen": "2026-09-28T21:14:30+00:00",
+   "discovery_h": 2.2,
+   "notify_min": 0.4,
+   "with_posted_at": 316,
+   "last_seen_h": 0.2
   },
   "reddit": {
-   "posts": 460,
-   "leads": 12,
-   "last_seen": "2026-09-27T05:16:10+00:00",
-   "discovery_h": null,
-   "notify_min": null,
-   "with_posted_at": 0,
-   "last_seen_h": 1.3
+   "posts": 649,
+   "leads": 19,
+   "last_seen": "2026-09-28T21:14:30+00:00",
+   "discovery_h": 2.9,
+   "notify_min": 0.7,
+   "with_posted_at": 649,
+   "last_seen_h": 0.2
   },
   "nextdoor": {
-   "posts": 24,
+   "posts": 88,
    "leads": 2,
-   "last_seen": "2026-09-27T03:54:48+00:00",
+   "last_seen": "2026-09-28T20:27:03+00:00",
    "discovery_h": null,
-   "notify_min": 2.7,
+   "notify_min": 6.3,
    "with_posted_at": 0,
-   "last_seen_h": 2.6,
+   "last_seen_h": 0.9,
    "cooldown_min": 0,
-   "daily_used": 17,
+   "daily_used": 22,
    "daily_cap": 90,
-   "last_run_h": null
+   "last_run_h": 1.5
   },
   "xhs": {
-   "posts": 8,
-   "leads": 0,
-   "last_seen": "2026-09-26T22:56:04.843034+00:00",
-   "discovery_h": null,
+   "posts": 74,
+   "leads": 2,
+   "last_seen": "2026-09-28T21:14:30+00:00",
+   "discovery_h": 24.2,
    "notify_min": null,
-   "with_posted_at": 0,
-   "last_seen_h": 7.6,
+   "with_posted_at": 74,
+   "last_seen_h": 0.2,
    "cooldown_min": 0,
-   "daily_used": 21,
+   "daily_used": 26,
    "daily_cap": 40,
-   "last_run_h": 5.0
+   "last_run_h": 0.4
   },
   "craigslist": {
-   "posts": 4,
+   "posts": 0,
    "leads": 0,
-   "last_seen": "2026-09-27T00:30:28+00:00",
+   "last_seen": null,
    "discovery_h": null,
    "notify_min": null,
    "with_posted_at": 0,
-   "last_seen_h": 6.0
+   "last_seen_h": null
   }
  },
  "pipeline": {
-  "backlog": 26,
-  "warnings_today": 1965,
-  "zero_groups_today": 82,
-  "last_cycle": "09-26 22:32:48"
+  "backlog": 0,
+  "warnings_today": 7,
+  "zero_groups_today": 0,
+  "last_cycle": "09-28 14:17:30",
+  "warning_types": [
+   {
+    "type": "群抓到 0 帖(选择器失效或没进群)",
+    "count": 58
+   },
+   {
+    "type": "监控页部署失败: Vercel CLI N.N.N (Node.js N.N.N)",
+    "count": 2
+   },
+   {
+    "type": "审稿拦下 Anna Bakalym Artistry <email>: 同一主题一周内已经发给过这个邮箱",
+    "count": 1
+   },
+   {
+    "type": "审稿拦下 Anna Bakalym Artistry <email>: 审稿: The vendor is based ",
+    "count": 1
+   },
+   {
+    "type": "监控告警发出",
+    "count": 1
+   },
+   {
+    "type": "审稿拦下 Anu'…'s area is listed as Sacramento, so the drafted DM",
+    "count": 1
+   },
+   {
+    "type": "审稿拦下 Events by Mia G <email>: 含有破折号",
+    "count": 1
+   },
+   {
+    "type": "审稿拦下 Ever After by Keke <email>: 含有破折号",
+    "count": 1
+   }
+  ]
  },
  "delivery": {
   "accounts": {
    "gmail": {
-    "sent_today": 133,
+    "sent_today": 1,
     "cap": 60
    },
    "nw": {
-    "sent_today": 1,
+    "sent_today": 21,
     "cap": 20
    }
   },
   "replies_today": {
-   "auto": 4,
-   "bounce": 2,
-   "rejected": 4,
-   "yes": 1
+   "auto": 1,
+   "question": 2
   },
-  "failed_sends_today": 0,
-  "bounces_today": 6,
-  "elaine_leads_today": 1,
-  "elaine_leads_7d": 13,
+  "failed_sends_today": 1,
+  "blocked_today": 4,
+  "bounces_today": 0,
+  "elaine_leads_today": 0,
+  "elaine_leads_7d": 19,
   "vendors": {
-   "total": 588,
-   "active": 3,
-   "engaged": 1,
+   "total": 713,
+   "active": 4,
+   "engaged": 3,
    "declined": 25,
    "paused": 3
   }
@@ -97,19 +130,9 @@
  },
  "alerts": [
   {
-   "key": "warnings",
-   "level": "medium",
-   "msg": "今天日志里已有 1965 条警告"
-  },
-  {
-   "key": "bounces",
-   "level": "high",
-   "msg": "今天退信和拒收 6 封,发信信誉在掉,先停冷邮件"
-  },
-  {
-   "key": "cap_gmail",
+   "key": "cap_nw",
    "level": "info",
-   "msg": "gmail 账号今天发满了(133/60)"
+   "msg": "nw 账号今天发满了(21/20)"
   }
  ]
 }

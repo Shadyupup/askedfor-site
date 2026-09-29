@@ -31,6 +31,7 @@ table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;p
 </style></head><body>
 <h1>AskedFor 监控</h1><div class="muted">更新于 ${esc(upd)}(太平洋时间)· 每 5 分钟自动刷新</div>
 <div class="card"><b class="t">🚨 告警</b>${alerts}</div>
+<div class="card"><b class="t">🤝 客户(回过信或已同意)</b><div class="wrap"><table><thead><tr><th>客户</th><th>今天</th><th>7 天</th><th>累计</th><th>最近一条</th><th>近 7 天</th></tr></thead><tbody>${(h.customers || []).map((c) => `<tr><td>${esc(c.name)}<br><span class="muted">${esc(c.category)} · ${esc(c.city)}</span></td><td>${esc(c.today)}</td><td>${esc(c.week)}</td><td>${esc(c.total)}</td><td style="${(c.last_sent_h||0) > 72 ? "color:var(--danger);font-weight:600" : ""}">${fmt(c.last_sent_h, " 小时前")}</td><td class="muted">${(c.daily||[]).join(" ")}</td></tr>`).join("") || '<tr><td colspan="6" class="muted">还没有</td></tr>'}</tbody></table></div></div>
 <div class="card"><b class="t">📡 渠道(过去 24 小时)</b><div class="wrap"><table><thead><tr><th>渠道</th><th>帖子</th><th>线索</th><th>最近抓到</th><th>发现延迟</th><th>推送延迟</th><th>配额与限流</th></tr></thead><tbody>${rows}</tbody></table></div>
 <div class="muted">发现延迟 = 帖子发出到我们抓到(中位数);推送延迟 = 抓到到发给 Elaine。超过 6 小时标红。</div></div>
 <div class="card"><b class="t">⚠️ 今天的警告,按类型</b>${(P.warning_types||[]).length ? (P.warning_types||[]).map((t) => `<div class="row"><b>${esc(t.count)}</b> × ${esc(t.type)}</div>`).join("") : '<div class="muted">今天没有警告</div>'}</div>
