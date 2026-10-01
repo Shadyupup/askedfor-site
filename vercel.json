@@ -1,5 +1,12 @@
 {
   "rewrites": [
-    { "source": "/monitor", "destination": "/api/monitor" }
+    {
+      "source": "/monitor",
+      "destination": "/api/monitor"
+    },
+    {
+      "source": "/l/:t",
+      "destination": "/api/l?t=:t"
+    }
   ]
 }

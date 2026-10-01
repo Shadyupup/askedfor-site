@@ -1,97 +1,97 @@
 {
- "at": "2026-09-28T21:23:43.617077+00:00",
+ "at": "2026-10-01T17:57:00.929800+00:00",
  "sources": {
   "facebook": {
-   "posts": 1545,
-   "leads": 26,
-   "last_seen": "2026-09-28T21:14:30+00:00",
-   "discovery_h": 2.2,
-   "notify_min": 0.4,
-   "with_posted_at": 316,
+   "posts": 1963,
+   "leads": 35,
+   "last_seen": "2026-10-01T17:44:57+00:00",
+   "discovery_h": 2.0,
+   "notify_min": 0.3,
+   "with_posted_at": 495,
    "last_seen_h": 0.2
   },
   "reddit": {
-   "posts": 649,
-   "leads": 19,
-   "last_seen": "2026-09-28T21:14:30+00:00",
-   "discovery_h": 2.9,
-   "notify_min": 0.7,
-   "with_posted_at": 649,
+   "posts": 731,
+   "leads": 24,
+   "last_seen": "2026-10-01T17:44:57+00:00",
+   "discovery_h": 5.5,
+   "notify_min": 0.9,
+   "with_posted_at": 633,
    "last_seen_h": 0.2
   },
   "nextdoor": {
-   "posts": 88,
-   "leads": 2,
-   "last_seen": "2026-09-28T20:27:03+00:00",
+   "posts": 62,
+   "leads": 0,
+   "last_seen": "2026-10-01T16:27:47+00:00",
    "discovery_h": null,
-   "notify_min": 6.3,
+   "notify_min": null,
    "with_posted_at": 0,
-   "last_seen_h": 0.9,
-   "cooldown_min": 0,
-   "daily_used": 22,
+   "last_seen_h": 1.5,
+   "cooldown_min": 11,
+   "daily_used": 11,
    "daily_cap": 90,
-   "last_run_h": 1.5
+   "last_run_h": 2.1
   },
   "xhs": {
-   "posts": 74,
-   "leads": 2,
-   "last_seen": "2026-09-28T21:14:30+00:00",
+   "posts": 91,
+   "leads": 3,
+   "last_seen": "2026-10-01T17:44:57+00:00",
    "discovery_h": 24.2,
    "notify_min": null,
-   "with_posted_at": 74,
+   "with_posted_at": 91,
    "last_seen_h": 0.2,
    "cooldown_min": 0,
-   "daily_used": 26,
+   "daily_used": 19,
    "daily_cap": 40,
-   "last_run_h": 0.4
+   "last_run_h": 0.5
   },
   "craigslist": {
-   "posts": 0,
+   "posts": 7,
    "leads": 0,
-   "last_seen": null,
-   "discovery_h": null,
+   "last_seen": "2026-10-01T05:05:49+00:00",
+   "discovery_h": 1.8,
    "notify_min": null,
-   "with_posted_at": 0,
-   "last_seen_h": null
+   "with_posted_at": 7,
+   "last_seen_h": 12.9
   }
  },
  "pipeline": {
   "backlog": 0,
-  "warnings_today": 7,
-  "zero_groups_today": 0,
-  "last_cycle": "09-28 14:17:30",
+  "warnings_today": 45,
+  "zero_groups_today": 2,
+  "last_cycle": "10-01 10:49:55",
   "warning_types": [
    {
+    "type": "Reddit 搜索失败: reddit N",
+    "count": 37
+   },
+   {
+    "type": "Nextdoor 限流(Throttled),歇两小时",
+    "count": 5
+   },
+   {
     "type": "群抓到 0 帖(选择器失效或没进群)",
-    "count": 58
+    "count": 5
    },
    {
-    "type": "监控页部署失败: Vercel CLI N.N.N (Node.js N.N.N)",
-    "count": 2
+    "type": "r/WeddingPhotography RSS 失败(reddit N),改走浏览器",
+    "count": 3
    },
    {
-    "type": "审稿拦下 Anna Bakalym Artistry <email>: 同一主题一周内已经发给过这个邮箱",
-    "count": 1
+    "type": "r/smallbusiness RSS 失败(reddit N),改走浏览器",
+    "count": 3
    },
    {
-    "type": "审稿拦下 Anna Bakalym Artistry <email>: 审稿: The vendor is based ",
-    "count": 1
+    "type": "r/SanGabrielValley 取数失败: Reddit 拦截了浏览器请求(network security)",
+    "count": 3
    },
    {
-    "type": "监控告警发出",
-    "count": 1
+    "type": "r/SanGabrielValley: N 条",
+    "count": 3
    },
    {
-    "type": "审稿拦下 Anu'…'s area is listed as Sacramento, so the drafted DM",
-    "count": 1
-   },
-   {
-    "type": "审稿拦下 Events by Mia G <email>: 含有破折号",
-    "count": 1
-   },
-   {
-    "type": "审稿拦下 Ever After by Keke <email>: 含有破折号",
-    "count": 1
+    "type": "r/sanfrancisco RSS 失败(reddit N),改走浏览器",
+    "count": 3
    }
   ]
  },
@@ -102,24 +102,23 @@
     "cap": 60
    },
    "nw": {
-    "sent_today": 21,
-    "cap": 20
+    "sent_today": 18,
+    "cap": 30
    }
   },
   "replies_today": {
-   "auto": 1,
-   "question": 2
+   "yes": 2
   },
-  "failed_sends_today": 1,
-  "blocked_today": 4,
+  "failed_sends_today": 0,
+  "blocked_today": 8,
   "bounces_today": 0,
-  "elaine_leads_today": 0,
-  "elaine_leads_7d": 19,
+  "elaine_leads_today": 1,
+  "elaine_leads_7d": 23,
   "vendors": {
-   "total": 713,
-   "active": 4,
-   "engaged": 3,
-   "declined": 25,
+   "total": 852,
+   "active": 7,
+   "engaged": 6,
+   "declined": 28,
    "paused": 3
   }
  },
@@ -130,9 +129,237 @@
  },
  "alerts": [
   {
-   "key": "cap_nw",
-   "level": "info",
-   "msg": "nw 账号今天发满了(21/20)"
+   "key": "nextdoor_cooldown",
+   "level": "medium",
+   "msg": "nextdoor 被限流,还剩 11 分钟"
+  },
+  {
+   "key": "starve_Rachel Levine Photog",
+   "level": "medium",
+   "msg": "客户 Rachel Levine Photography 已 3 天没收到线索,查一下是没匹配到还是被过滤了"
+  },
+  {
+   "key": "critic_blocks",
+   "level": "medium",
+   "msg": "审稿人今天拦下 8 封邮件,去控制台看原因"
+  }
+ ],
+ "customers": [
+  {
+   "name": "Anna Bakalym Artistry",
+   "category": "hair_makeup",
+   "city": "Sacramento",
+   "regions": "Bay Area",
+   "status": "active",
+   "lead_filter": "",
+   "languages": "",
+   "today": 0,
+   "week": 10,
+   "total": 11,
+   "last_sent_h": 39.2,
+   "replied": 2,
+   "booked": 0,
+   "blocked": 3,
+   "failed": 0,
+   "last_reply_h": 135.2,
+   "daily": [
+    1,
+    6,
+    2,
+    0,
+    1,
+    0,
+    0
+   ],
+   "days": [
+    "09-25",
+    "09-26",
+    "09-27",
+    "09-28",
+    "09-29",
+    "09-30",
+    "10-01"
+   ]
+  },
+  {
+   "name": "Bay Area Beats DJs",
+   "category": "dj_music",
+   "city": "Bay Area",
+   "regions": "",
+   "status": "active",
+   "lead_filter": "",
+   "languages": "",
+   "today": 0,
+   "week": 2,
+   "total": 2,
+   "last_sent_h": 25.4,
+   "replied": 2,
+   "booked": 0,
+   "blocked": 0,
+   "failed": 0,
+   "last_reply_h": 0.1,
+   "daily": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   "days": [
+    "09-25",
+    "09-26",
+    "09-27",
+    "09-28",
+    "09-29",
+    "09-30",
+    "10-01"
+   ]
+  },
+  {
+   "name": "Contessa Aesthetics",
+   "category": "hair_makeup",
+   "city": "Bay Area",
+   "regions": "",
+   "status": "active",
+   "lead_filter": "",
+   "languages": "",
+   "today": 0,
+   "week": 4,
+   "total": 4,
+   "last_sent_h": 17.6,
+   "replied": 1,
+   "booked": 0,
+   "blocked": 1,
+   "failed": 0,
+   "last_reply_h": 71.1,
+   "daily": [
+    0,
+    0,
+    0,
+    1,
+    2,
+    1,
+    0
+   ],
+   "days": [
+    "09-25",
+    "09-26",
+    "09-27",
+    "09-28",
+    "09-29",
+    "09-30",
+    "10-01"
+   ]
+  },
+  {
+   "name": "Kate Whelan Events",
+   "category": "planner",
+   "city": "Sacramento",
+   "regions": "Bay Area,Tahoe",
+   "status": "active",
+   "lead_filter": "Only full or partial wedding planning; no day-of coordination requests",
+   "languages": "",
+   "today": 0,
+   "week": 2,
+   "total": 2,
+   "last_sent_h": 46.5,
+   "replied": 1,
+   "booked": 0,
+   "blocked": 1,
+   "failed": 0,
+   "last_reply_h": 120.6,
+   "daily": [
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   "days": [
+    "09-25",
+    "09-26",
+    "09-27",
+    "09-28",
+    "09-29",
+    "09-30",
+    "10-01"
+   ]
+  },
+  {
+   "name": "Only One Tea Ceremony",
+   "category": "planner",
+   "city": "Bay Area",
+   "regions": "Sacramento,Los Angeles,San Diego",
+   "status": "active",
+   "lead_filter": "Only California weddings (including NorCal and SoCal/LA) with budgets above $25K, or $10K+ for city hall weddings",
+   "languages": "zh",
+   "today": 0,
+   "week": 2,
+   "total": 2,
+   "last_sent_h": 46.0,
+   "replied": 2,
+   "booked": 0,
+   "blocked": 0,
+   "failed": 0,
+   "last_reply_h": 1.8,
+   "daily": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "days": [
+    "09-25",
+    "09-26",
+    "09-27",
+    "09-28",
+    "09-29",
+    "09-30",
+    "10-01"
+   ]
+  },
+  {
+   "name": "Rachel Levine Photography",
+   "category": "photographer",
+   "city": "Bay Area",
+   "regions": "",
+   "status": "active",
+   "lead_filter": "",
+   "languages": "",
+   "today": 0,
+   "week": 3,
+   "total": 4,
+   "last_sent_h": 72.3,
+   "replied": 3,
+   "booked": 0,
+   "blocked": 0,
+   "failed": 0,
+   "last_reply_h": 39.5,
+   "daily": [
+    1,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0
+   ],
+   "days": [
+    "09-25",
+    "09-26",
+    "09-27",
+    "09-28",
+    "09-29",
+    "09-30",
+    "10-01"
+   ]
   }
  ]
 }
