@@ -7,6 +7,10 @@
     {
       "source": "/l/:t",
       "destination": "/api/l?t=:t"
+    },
+    {
+      "source": "/vendors",
+      "destination": "/vendors.html"
     }
   ]
 }

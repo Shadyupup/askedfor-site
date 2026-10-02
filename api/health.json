@@ -1,96 +1,96 @@
 {
- "at": "2026-10-01T17:57:00.929800+00:00",
+ "at": "2026-10-02T00:01:23.056525+00:00",
  "sources": {
   "facebook": {
-   "posts": 1963,
-   "leads": 35,
-   "last_seen": "2026-10-01T17:44:57+00:00",
-   "discovery_h": 2.0,
+   "posts": 1721,
+   "leads": 32,
+   "last_seen": "2026-10-02T00:01:22+00:00",
+   "discovery_h": 2.1,
    "notify_min": 0.3,
-   "with_posted_at": 495,
-   "last_seen_h": 0.2
+   "with_posted_at": 385,
+   "last_seen_h": 0.0
   },
   "reddit": {
-   "posts": 731,
+   "posts": 766,
    "leads": 24,
-   "last_seen": "2026-10-01T17:44:57+00:00",
-   "discovery_h": 5.5,
-   "notify_min": 0.9,
-   "with_posted_at": 633,
+   "last_seen": "2026-10-01T23:50:13+00:00",
+   "discovery_h": 5.4,
+   "notify_min": 1.7,
+   "with_posted_at": 554,
    "last_seen_h": 0.2
   },
   "nextdoor": {
-   "posts": 62,
-   "leads": 0,
-   "last_seen": "2026-10-01T16:27:47+00:00",
-   "discovery_h": null,
-   "notify_min": null,
-   "with_posted_at": 0,
-   "last_seen_h": 1.5,
-   "cooldown_min": 11,
-   "daily_used": 11,
+   "posts": 52,
+   "leads": 1,
+   "last_seen": "2026-10-01T21:35:22+00:00",
+   "discovery_h": 1.3,
+   "notify_min": 6.6,
+   "with_posted_at": 2,
+   "last_seen_h": 2.4,
+   "cooldown_min": 0,
+   "daily_used": 22,
    "daily_cap": 90,
-   "last_run_h": 2.1
+   "last_run_h": 3.0
   },
   "xhs": {
-   "posts": 91,
-   "leads": 3,
-   "last_seen": "2026-10-01T17:44:57+00:00",
-   "discovery_h": 24.2,
+   "posts": 57,
+   "leads": 2,
+   "last_seen": "2026-10-01T23:50:13+00:00",
+   "discovery_h": 24.1,
    "notify_min": null,
-   "with_posted_at": 91,
+   "with_posted_at": 57,
    "last_seen_h": 0.2,
    "cooldown_min": 0,
-   "daily_used": 19,
+   "daily_used": 38,
    "daily_cap": 40,
-   "last_run_h": 0.5
+   "last_run_h": 0.4
   },
   "craigslist": {
-   "posts": 7,
+   "posts": 4,
    "leads": 0,
    "last_seen": "2026-10-01T05:05:49+00:00",
-   "discovery_h": 1.8,
+   "discovery_h": 1.5,
    "notify_min": null,
-   "with_posted_at": 7,
-   "last_seen_h": 12.9
+   "with_posted_at": 4,
+   "last_seen_h": 18.9
   }
  },
  "pipeline": {
-  "backlog": 0,
-  "warnings_today": 45,
-  "zero_groups_today": 2,
-  "last_cycle": "10-01 10:49:55",
+  "backlog": 1,
+  "warnings_today": 119,
+  "zero_groups_today": 3,
+  "last_cycle": "10-01 17:01:22",
   "warning_types": [
    {
     "type": "Reddit 搜索失败: reddit N",
     "count": 37
    },
    {
-    "type": "Nextdoor 限流(Throttled),歇两小时",
-    "count": 5
+    "type": "分类失败: Error code: N - {'error': {'message': 'No available accounts",
+    "count": 34
    },
    {
     "type": "群抓到 0 帖(选择器失效或没进群)",
     "count": 5
    },
    {
-    "type": "r/WeddingPhotography RSS 失败(reddit N),改走浏览器",
-    "count": 3
+    "type": "Nextdoor 限流(Throttled),歇两小时",
+    "count": 4
    },
    {
-    "type": "r/smallbusiness RSS 失败(reddit N),改走浏览器",
-    "count": 3
-   },
-   {
-    "type": "r/SanGabrielValley 取数失败: Reddit 拦截了浏览器请求(network security)",
-    "count": 3
-   },
-   {
-    "type": "r/SanGabrielValley: N 条",
+    "type": "r/wedding RSS 失败(reddit N),改走浏览器",
     "count": 3
    },
    {
     "type": "r/sanfrancisco RSS 失败(reddit N),改走浏览器",
+    "count": 3
+   },
+   {
+    "type": "监控告警发出",
+    "count": 3
+   },
+   {
+    "type": "r/weddingplanning RSS 失败(reddit N),改走浏览器",
     "count": 3
    }
   ]
@@ -98,27 +98,28 @@
  "delivery": {
   "accounts": {
    "gmail": {
-    "sent_today": 1,
+    "sent_today": 4,
     "cap": 60
    },
    "nw": {
-    "sent_today": 18,
+    "sent_today": 30,
     "cap": 30
    }
   },
   "replies_today": {
-   "yes": 2
+   "no": 1,
+   "yes": 3
   },
   "failed_sends_today": 0,
-  "blocked_today": 8,
+  "blocked_today": 14,
   "bounces_today": 0,
-  "elaine_leads_today": 1,
+  "elaine_leads_today": 2,
   "elaine_leads_7d": 23,
   "vendors": {
-   "total": 852,
+   "total": 883,
    "active": 7,
    "engaged": 6,
-   "declined": 28,
+   "declined": 29,
    "paused": 3
   }
  },
@@ -129,11 +130,6 @@
  },
  "alerts": [
   {
-   "key": "nextdoor_cooldown",
-   "level": "medium",
-   "msg": "nextdoor 被限流,还剩 11 分钟"
-  },
-  {
    "key": "starve_Rachel Levine Photog",
    "level": "medium",
    "msg": "客户 Rachel Levine Photography 已 3 天没收到线索,查一下是没匹配到还是被过滤了"
@@ -141,7 +137,12 @@
   {
    "key": "critic_blocks",
    "level": "medium",
-   "msg": "审稿人今天拦下 8 封邮件,去控制台看原因"
+   "msg": "审稿人今天拦下 14 封邮件,去控制台看原因"
+  },
+  {
+   "key": "cap_nw",
+   "level": "info",
+   "msg": "nw 账号今天发满了(30/30)"
   }
  ],
  "customers": [
@@ -156,12 +157,12 @@
    "today": 0,
    "week": 10,
    "total": 11,
-   "last_sent_h": 39.2,
+   "last_sent_h": 45.2,
    "replied": 2,
    "booked": 0,
-   "blocked": 3,
+   "blocked": 4,
    "failed": 0,
-   "last_reply_h": 135.2,
+   "last_reply_h": 141.3,
    "daily": [
     1,
     6,
@@ -187,17 +188,17 @@
    "city": "Bay Area",
    "regions": "",
    "status": "active",
-   "lead_filter": "",
+   "lead_filter": "DJ and MC bookings only: weddings, corporate or company events and private parties that want a DJ, with sound system and lighting. Skip requests for a solo musician, violinist, cellist, guitarist, harpist, live band or ceremony-only live music.",
    "languages": "",
    "today": 0,
    "week": 2,
    "total": 2,
-   "last_sent_h": 25.4,
+   "last_sent_h": 31.5,
    "replied": 2,
    "booked": 0,
    "blocked": 0,
    "failed": 0,
-   "last_reply_h": 0.1,
+   "last_reply_h": 6.2,
    "daily": [
     0,
     1,
@@ -228,12 +229,12 @@
    "today": 0,
    "week": 4,
    "total": 4,
-   "last_sent_h": 17.6,
+   "last_sent_h": 23.6,
    "replied": 1,
    "booked": 0,
    "blocked": 1,
    "failed": 0,
-   "last_reply_h": 71.1,
+   "last_reply_h": 77.2,
    "daily": [
     0,
     0,
@@ -257,19 +258,19 @@
    "name": "Kate Whelan Events",
    "category": "planner",
    "city": "Sacramento",
-   "regions": "Bay Area,Tahoe",
+   "regions": "Bay Area,Tahoe,Central Coast",
    "status": "active",
-   "lead_filter": "Only full or partial wedding planning; no day-of coordination requests",
+   "lead_filter": "Only full or partial wedding planning; no day-of coordination requests. Not Sacramento proper. Prefers Wine Country (Napa, Sonoma), Lake Tahoe, San Francisco and the Central Coast (Monterey, Carmel, Santa Cruz), sometimes further.",
    "languages": "",
    "today": 0,
    "week": 2,
    "total": 2,
-   "last_sent_h": 46.5,
-   "replied": 1,
+   "last_sent_h": 52.6,
+   "replied": 2,
    "booked": 0,
-   "blocked": 1,
+   "blocked": 0,
    "failed": 0,
-   "last_reply_h": 120.6,
+   "last_reply_h": 0.8,
    "daily": [
     0,
     1,
@@ -295,17 +296,17 @@
    "city": "Bay Area",
    "regions": "Sacramento,Los Angeles,San Diego",
    "status": "active",
-   "lead_filter": "Only California weddings (including NorCal and SoCal/LA) with budgets above $25K, or $10K+ for city hall weddings",
+   "lead_filter": "California weddings of any culture, Asian or not, in Northern or Southern California. Total wedding budget must be above $25K, or above $10K for a city hall wedding; skip any request that states a lower budget. No preference on guest count.",
    "languages": "zh",
-   "today": 0,
-   "week": 2,
-   "total": 2,
-   "last_sent_h": 46.0,
+   "today": 1,
+   "week": 3,
+   "total": 3,
+   "last_sent_h": 4.1,
    "replied": 2,
    "booked": 0,
    "blocked": 0,
    "failed": 0,
-   "last_reply_h": 1.8,
+   "last_reply_h": 7.9,
    "daily": [
     0,
     0,
@@ -313,7 +314,7 @@
     1,
     1,
     0,
-    0
+    1
    ],
    "days": [
     "09-25",
@@ -336,12 +337,12 @@
    "today": 0,
    "week": 3,
    "total": 4,
-   "last_sent_h": 72.3,
+   "last_sent_h": 78.4,
    "replied": 3,
    "booked": 0,
    "blocked": 0,
    "failed": 0,
-   "last_reply_h": 39.5,
+   "last_reply_h": 45.6,
    "daily": [
     1,
     0,
